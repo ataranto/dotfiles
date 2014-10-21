@@ -26,6 +26,7 @@ alias tag="ctags -R *$1"
 alias timestamp="date +%Y%m%d%H%M"
 alias datestamp="date +%Y%m%d"
 alias flushdns="dscacheutil -flushcache"
+alias gradle="sh ./gradlew"
 
 #completion
 autoload -U compinit
@@ -54,3 +55,8 @@ case $TERM in
         }
         ;;
 esac
+
+BOXEN_ENV=/opt/boxen/env.sh
+if [[ -f $BOXEN_ENV ]]; then
+  source $BOXEN_ENV
+fi
