@@ -27,6 +27,7 @@ alias timestamp="date +%Y%m%d%H%M"
 alias datestamp="date +%Y%m%d"
 alias flushdns="dscacheutil -flushcache"
 alias gradle="sh ./gradlew"
+alias unmerged="git ls-files --unmerged | cut -f2 | sort -u"
 
 #completion
 autoload -U compinit
