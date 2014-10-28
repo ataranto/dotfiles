@@ -28,6 +28,7 @@ alias datestamp="date +%Y%m%d"
 alias flushdns="dscacheutil -flushcache"
 alias gradle="sh ./gradlew"
 alias unmerged="git ls-files --unmerged | cut -f2 | sort -u"
+alias json="python -m json.tool"
 
 #completion
 autoload -U compinit
