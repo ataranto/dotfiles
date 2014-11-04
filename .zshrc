@@ -38,12 +38,11 @@ zstyle ':completion:*::::' completer _expand _complete _ignored _approximate
 
 #colorize ls
 case `uname -s` in
-    FreeBSD)
-        alias ls='ls -G'
-        ;;
+    FreeBSD) ;&
+    Darwin)
+        alias ls='ls -G' ;;
     Linux)
-        alias ls='ls --color=tty'
-        ;;
+        alias ls='ls --color=tty' ;;
 esac
 
 #x terminal title
