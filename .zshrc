@@ -10,8 +10,11 @@ RPROMPT="[%~]"
 
 #history file
 HISTFILE=$HOME/.zsh_history
-HISTSIZE=500
-SAVEHIST=500
+HISTSIZE=1024
+SAVEHIST=1024
+setopt INC_APPEND_HISTORY
+setopt SHARE_HISTORY
+setopt HIST_IGNORE_ALL_DUPS
 
 #alias
 alias c="cd"
