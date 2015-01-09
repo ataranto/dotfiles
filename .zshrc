@@ -23,6 +23,7 @@ alias sl="ls"
 alias ks="ls"
 alias mkae="make"
 alias grpe="grep"
+alias gti="git"
 alias g="mvim"
 alias gdiff="git diff $* | mvim -"
 alias tag="ctags -R *$1"
@@ -32,6 +33,7 @@ alias flushdns="dscacheutil -flushcache"
 alias gradle="sh ./gradlew"
 alias unmerged="git ls-files --unmerged | cut -f2 | sort -u"
 alias json="python -m json.tool"
+alias ip="ifconfig en0 | grep inet | grep netmask | cut -d ' ' -f 2 | tr -d '\n' | pbcopy"
 
 #completion
 autoload -U compinit
