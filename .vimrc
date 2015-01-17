@@ -7,8 +7,8 @@ filetype on
 au! BufNewFile,BufRead *.gob set filetype=cpp
 au! BufNewFile,BufRead *.less set filetype=css
 au! BufNewFile,BufRead *.rb set tabstop=2 shiftwidth=2
-au! BufNewFile,BufRead *.erb set tabstop=2 shiftwidth=2
-au! BufNewFile,BufRead *.jbuilder set tabstop=2 shiftwidth=2
+au! BufNewFile,BufRead *.erb set filetype=ruby tabstop=2 shiftwidth=2
+au! BufNewFile,BufRead *.jbuilder set filetype=ruby tabstop=2 shiftwidth=2
 au! BufNewFile,BufRead *.yml set tabstop=2 shiftwidth=2
 au! BufNewFile,BufRead *.m set tabstop=2 shiftwidth=2
 au! BufNewFile,BufRead *.pp set tabstop=2 shiftwidth=2
@@ -36,7 +36,7 @@ map <C-J> zzjzz
 map <C-K> zzkzz
 
 if has("gui_running")
-    colorscheme koehler
+    colorscheme evening
     set guioptions-=m
     set guioptions-=T
     set guioptions-=r
