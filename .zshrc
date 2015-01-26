@@ -65,4 +65,5 @@ esac
 BOXEN_ENV=/opt/boxen/env.sh
 if [[ -f $BOXEN_ENV ]]; then
   source $BOXEN_ENV
+  source /opt/boxen/homebrew/share/zsh/site-functions/_aws
 fi
