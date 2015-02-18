@@ -1,10 +1,8 @@
 setopt autocd
+setopt complete_aliases
 bindkey -e
 
-export EDITOR="vim"
-
-PATH="$HOME/bin:$PATH"
-
+EDITOR="vim"
 PROMPT="%n@%m%% "
 RPROMPT="[%~]"
 
@@ -35,11 +33,8 @@ alias unmerged="git ls-files --unmerged | cut -f2 | sort -u"
 alias json="python -m json.tool"
 alias ip="ifconfig en0 | grep inet | grep netmask | cut -d ' ' -f 2 | tr -d '\n' | pbcopy"
 
-#completion
-autoload -U compinit
-compinit
-#completers
-zstyle ':completion:*::::' completer _expand _complete _ignored _approximate
+autoload -Uz compinit && compinit
+zstyle ':completion:*' completer _expand _complete _approximate
 
 #colorize ls
 case `uname -s` in
@@ -65,5 +60,7 @@ esac
 BOXEN_ENV=/opt/boxen/env.sh
 if [[ -f $BOXEN_ENV ]]; then
   source $BOXEN_ENV
-  source /opt/boxen/homebrew/share/zsh/site-functions/_aws
+
+  fpath=($HOMEBREW_ROOT/share/zsh/site-functions $fpath)
+  source $HOMEBREW_ROOT/share/zsh/site-functions/_aws
 fi
