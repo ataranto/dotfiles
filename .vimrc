@@ -13,25 +13,23 @@ au! BufNewFile,BufRead *.jbuilder set filetype=ruby tabstop=2 shiftwidth=2
 au! BufNewFile,BufRead *.yml set tabstop=2 shiftwidth=2
 au! BufNewFile,BufRead *.m set tabstop=2 shiftwidth=2
 au! BufNewFile,BufRead *.pp set tabstop=2 shiftwidth=2
+au! BufNewFile,BufRead *.scss set tabstop=2 shiftwidth=2
 
 set nocompatible
-
 set ruler
 set showcmd
 set incsearch
-
+set hlsearch
 set tabstop=4
 set shiftwidth=4
 set backspace=2
 set scrolloff=4
 set autoindent
 set expandtab
-set hlsearch
-
 set sm
 set vb
-
 set tags=tags;/
+set directory=~/.vim/swap
 
 map <C-J> zzjzz
 map <C-K> zzkzz
