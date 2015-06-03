@@ -33,6 +33,7 @@ alias json="python -m json.tool"
 alias ip="ifconfig en0 | grep inet | grep netmask | cut -d ' ' -f 2 | tr -d '\n' | pbcopy"
 
 gdiff() { git diff $@ | mvim - }
+glog() { git log $@ | mvim - }
 
 autoload -Uz compinit && compinit
 zstyle ':completion:*' completer _expand _complete _approximate
