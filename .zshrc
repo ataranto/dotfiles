@@ -35,6 +35,7 @@ alias rt="find spec -name '*_spec.rb' -print0 | xargs -0 stat -f '%m %N' | sort 
 
 gdiff() { git diff $@ | mvim - }
 glog() { git log $@ | mvim - }
+ggrep() { git grep -l $@ | xargs mvim }
 
 autoload -Uz compinit && compinit
 zstyle ':completion:*' completer _expand _complete _approximate
