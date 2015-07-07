@@ -39,6 +39,7 @@ function! RSpecPath(path)
     let l:spec_path = a:path
     let l:spec_path = substitute(l:spec_path, 'app', 'spec', '')
     let l:spec_path = substitute(l:spec_path, '.rb', '_spec.rb', '')
+    let l:spec_path = substitute(l:spec_path, '.jbuilder', '.jbuilder_spec.rb', '')
 
     return l:spec_path
 endfunction
