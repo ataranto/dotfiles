@@ -67,4 +67,6 @@ if [[ -f $BOXEN_ENV ]]; then
 
   fpath=($HOMEBREW_ROOT/share/zsh/site-functions $fpath)
   source $HOMEBREW_ROOT/share/zsh/site-functions/_aws
+
+  export SSL_CERT_FILE=$HOMEBREW_ROOT/etc/openssl/cert.pem
 fi
