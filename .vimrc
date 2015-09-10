@@ -44,7 +44,7 @@ function! RSpecPath(path)
     return l:spec_path
 endfunction
 
-if has("gui_running")
+if has("gui")
     colorscheme evening
     set guioptions-=m
     set guioptions-=T
