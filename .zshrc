@@ -17,6 +17,7 @@ setopt HIST_IGNORE_ALL_DUPS
 #alias
 alias c="cd"
 alias s="git status"
+alias d="git diff"
 alias vf="cd"
 alias sl="ls"
 alias ks="ls"
