@@ -36,6 +36,7 @@ alias json="python -m json.tool"
 alias ip="ifconfig en0 | grep inet | grep netmask | cut -d ' ' -f 2 | tr -d '\n' | pbcopy"
 alias rf="rspec --only-failures"
 alias rt="find spec -name '*_spec.rb' -print0 | xargs -0 stat -f '%m %N' | sort -rn | head -1 | cut -d ' ' -f 2 | xargs bundle exec rspec"
+alias password="openssl rand -base64 6"
 
 gdiff() { git diff $@ | mvim - }
 glog() { git log $@ | mvim - }
