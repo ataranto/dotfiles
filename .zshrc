@@ -74,5 +74,4 @@ if [[ -f $BOXEN_ENV ]]; then
   source $HOMEBREW_ROOT/share/zsh/site-functions/_aws
 
   export JAVA_HOME=$(/usr/libexec/java_home)
-  export SSL_CERT_FILE=$HOMEBREW_ROOT/etc/openssl/cert.pem
 fi
