@@ -15,6 +15,7 @@ au! BufNewFile,BufRead *.m set tabstop=2 shiftwidth=2
 au! BufNewFile,BufRead *.pp set tabstop=2 shiftwidth=2
 au! BufNewFile,BufRead *.scss set tabstop=2 shiftwidth=2
 au! BufNewFile,BufRead *.js set tabstop=2 shiftwidth=2
+au! BufNewFile,BufRead *.tf set tabstop=2 shiftwidth=2
 
 set nocompatible
 set ruler
