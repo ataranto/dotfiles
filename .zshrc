@@ -41,6 +41,7 @@ alias password="openssl rand -base64 6"
 gdiff() { git diff $@ | mvim - }
 glog() { git log $@ | mvim - }
 ggrep() { git grep -l $@ | xargs mvim }
+gfgrep() { git ls-files | grep --color=auto $@ }
 
 autoload -Uz compinit && compinit
 zstyle ':completion:*' completer _expand _complete _approximate
