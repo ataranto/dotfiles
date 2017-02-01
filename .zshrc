@@ -38,6 +38,8 @@ alias rf="rspec --only-failures"
 alias rt="find spec -name '*_spec.rb' -print0 | xargs -0 stat -f '%m %N' | sort -rn | head -1 | cut -d ' ' -f 2 | xargs bundle exec rspec"
 alias password="openssl rand -base64 6"
 
+xg() { xargs mvim }
+xgs() { xargs mvim -o }
 gdiff() { git diff $@ | mvim - }
 glog() { git log $@ | mvim - }
 ggrep() { git grep -l $@ | xargs mvim }
