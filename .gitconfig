@@ -2,3 +2,4 @@
     b = branch
     co = checkout
     recent = for-each-ref --sort=-committerdate refs/heads/ --format='%(committerdate:iso) %(refname:short)'
+    untracked = ls-files --others --exclude-standard
