@@ -59,7 +59,7 @@ esac
 
 #x terminal title
 case $TERM in
-    *xterm*|rxvt|(dt|k|E)term)
+    *xterm*|rxvt|ansi|(dt|k|E)term)
         precmd () {
             print -Pn "\033]0;%n@%m : %~\007"
         }
