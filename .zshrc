@@ -18,6 +18,7 @@ setopt HIST_IGNORE_ALL_DUPS
 alias c="cd"
 alias s="git status"
 alias d="git diff"
+alias k="kubectl"
 alias vf="cd"
 alias sl="ls"
 alias ks="ls"
@@ -38,6 +39,7 @@ alias rf="rspec --only-failures"
 alias rt="find spec -name '*_spec.rb' -print0 | xargs -0 stat -f '%m %N' | sort -rn | head -1 | cut -d ' ' -f 2 | xargs bundle exec rspec"
 alias password="openssl rand -base64 6"
 
+dim() { printf "\e[8;$2;$1t" }
 xg() { xargs mvim }
 xgs() { xargs mvim -o }
 gdiff() { git diff $@ | mvim - }
