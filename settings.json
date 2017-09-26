@@ -2,11 +2,7 @@
   "editor.folding": false,
   "editor.fontSize": 14,
   "editor.minimap.enabled": false,
-  "editor.rulers": [
-    80,
-    120
-  ],
-  "workbench.colorTheme": "Visual Studio Dark",
-  "window.zoomLevel": 0,
-  "workbench.editor.tabSizing": "shrink"
+  "editor.rulers": [80, 120],
+  "editor.tabSize": 2,
+  "workbench.colorTheme": "Visual Studio Dark"
 }
