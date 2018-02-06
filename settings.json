@@ -3,6 +3,7 @@
   "editor.fontSize": 14,
   "editor.minimap.enabled": false,
   "editor.rulers": [80, 120],
-  "editor.tabSize": 2,
-  "workbench.colorTheme": "Visual Studio Dark"
+  "editor.tabSize": 4,
+  "workbench.colorTheme": "Visual Studio Dark",
+  "window.zoomLevel": 0
 }
