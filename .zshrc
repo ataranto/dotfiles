@@ -75,8 +75,6 @@ case $TERM in
         ;;
 esac
 
-export DOTNET_CLI_TELEMETRY_OPTOUT=1
-
 BOXEN_ENV=/opt/boxen/env.sh
 if [[ -f $BOXEN_ENV ]]; then
   source $BOXEN_ENV
