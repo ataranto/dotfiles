@@ -75,6 +75,8 @@ case $TERM in
         ;;
 esac
 
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
+
 if (($+commands[hub] )); then
     eval "$(hub alias -s)"
 fi
