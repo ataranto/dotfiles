@@ -75,12 +75,6 @@ case $TERM in
         ;;
 esac
 
-BOXEN_ENV=/opt/boxen/env.sh
-if [[ -f $BOXEN_ENV ]]; then
-  source $BOXEN_ENV
-
-  fpath=($HOMEBREW_ROOT/share/zsh/site-functions $fpath)
-  source $HOMEBREW_ROOT/share/zsh/site-functions/_aws
-
-  export JAVA_HOME=$(/usr/libexec/java_home)
+if (($+commands[hub] )); then
+    eval "$(hub alias -s)"
 fi
