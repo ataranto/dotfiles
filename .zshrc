@@ -81,6 +81,10 @@ if (( $+commands[hub] )); then
     eval "$(hub alias -s)"
 fi
 
+if (( $+commands[rbenv] )); then
+    eval "$(rbenv init -)"
+fi
+
 for file in $HOME/.zshrc.*; do
     source $file
 done
