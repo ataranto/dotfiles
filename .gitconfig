@@ -1,5 +1,6 @@
 [alias]
     b = branch
+    s = status
     co = checkout
     cob = checkout -b
     grpe = grep
