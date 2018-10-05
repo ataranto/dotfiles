@@ -1,6 +1,7 @@
 [alias]
     b = branch
     s = status
+    pr = pull-request
     co = checkout
     cob = checkout -b
     grpe = grep
