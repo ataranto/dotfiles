@@ -82,6 +82,10 @@ if (( $+commands[hub] )); then
     eval "$(hub alias -s)"
 fi
 
+if (( $+commands[pyenv] )); then
+    eval "$(pyenv init -)"
+fi
+
 if (( $+commands[rbenv] )); then
     eval "$(rbenv init -)"
 fi
