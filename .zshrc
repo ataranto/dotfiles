@@ -91,6 +91,10 @@ if (( $+commands[rbenv] )); then
     eval "$(rbenv init -)"
 fi
 
+if (( $+commands[nodenv] )); then
+    eval "$(nodenv init -)"
+fi
+
 for file in $HOME/.zshrc.*; do
     source $file
 done
