@@ -60,6 +60,7 @@ zstyle ':completion:*' completer _expand _complete _approximate
 case `uname -s` in
     FreeBSD) ;&
     Darwin)
+        export LSCOLORS="Fa"
         alias ls='ls -G' ;;
     Linux)
         alias ls='ls --color=tty' ;;
