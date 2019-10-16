@@ -2,7 +2,7 @@ setopt autocd
 setopt complete_aliases
 bindkey -e
 
-EDITOR="vim"
+export EDITOR="vim"
 PROMPT="%n@%m%% "
 RPROMPT="[%~]"
 
