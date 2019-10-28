@@ -32,6 +32,7 @@ set sm
 set vb
 set tags=tags;/
 set directory=~/.vim/swap
+set cursorline
 
 map <C-J> zzjzz
 map <C-K> zzkzz
