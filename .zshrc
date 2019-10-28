@@ -99,6 +99,10 @@ if (( $+commands[nodenv] )); then
     eval "$(nodenv init -)"
 fi
 
+if (( $+commands[kubectl] )); then
+    eval "$(kubectl completion zsh)"
+fi
+
 for file in $HOME/.zshrc.*; do
     source $file
 done
