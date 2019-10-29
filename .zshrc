@@ -18,7 +18,6 @@ setopt HIST_IGNORE_ALL_DUPS
 alias c="cd"
 alias d="git diff"
 alias g="mvim"
-alias k="kubectl"
 alias s="git status"
 alias gb="gradle build"
 alias gg="git grep"
@@ -101,6 +100,8 @@ fi
 
 if (( $+commands[kubectl] )); then
     eval "$(kubectl completion zsh)"
+    alias k="kubectl"
+    complete -o default -F __start_kubectl k
 fi
 
 for file in $HOME/.zshrc.*; do
