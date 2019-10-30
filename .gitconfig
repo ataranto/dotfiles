@@ -2,6 +2,7 @@
     b = branch
     s = status
     pr = pull-request
+    lp = log --pretty=oneline --abbrev-commit
     co = checkout
     cob = checkout -b
     grpe = grep
