@@ -27,7 +27,6 @@ alias ggl="git grep -l"
 alias vf="cd"
 alias sl="ls"
 alias ks="ls"
-alias cn="code -n ."
 alias mkae="make"
 alias rkae="rake"
 alias grpe="grep"
@@ -47,6 +46,7 @@ alias rt="find spec -name '*_spec.rb' -print0 | xargs -0 stat -f '%m %N' | sort 
 alias password="openssl rand -base64 6"
 alias hotspot="git log --format=format: --name-only | grep -v '^$' | sort | uniq -c | sort -r"
 
+cn() { code -n ${1:-.} }
 cne() { code -n ${1:-.} && exit }
 dim() { printf "\e[8;$2;$1t" }
 xg() { xargs mvim }
