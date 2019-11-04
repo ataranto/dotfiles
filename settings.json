@@ -16,5 +16,6 @@
   "FSharp.fsiFilePath": "/usr/local/bin/dotnet",
   "FSharp.fsiExtraParameters": [
     "fsi"
-  ]
+  ],
+  "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
 }
