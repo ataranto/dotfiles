@@ -27,6 +27,7 @@ alias ggl="git grep -l"
 alias vf="cd"
 alias sl="ls"
 alias ks="ls"
+alias mk="minikube"
 alias mkae="make"
 alias rkae="rake"
 alias grpe="grep"
@@ -103,6 +104,10 @@ if (( $+commands[kubectl] )); then
     eval "$(kubectl completion zsh)"
     alias k="kubectl"
     complete -o default -F __start_kubectl k
+fi
+
+if (( $+commands[kops] )); then
+    eval "$(kops completion zsh)"
 fi
 
 for file in $HOME/.zshrc.*; do
