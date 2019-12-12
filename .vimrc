@@ -32,7 +32,6 @@ set sm
 set vb
 set tags=tags;/
 set directory=~/.vim/swap
-set cursorline
 
 map <C-J> zzjzz
 map <C-K> zzkzz
@@ -49,6 +48,7 @@ endfunction
 
 if has("gui_running")
     colorscheme evening
+    set cursorline
     set guioptions-=m
     set guioptions-=T
     set guioptions-=r
