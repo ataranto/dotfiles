@@ -111,6 +111,10 @@ if (( $+commands[kops] )); then
     eval "$(kops completion zsh)"
 fi
 
+if (( $+commands[kind] )); then
+    eval "$(kind completion zsh)"
+fi
+
 for file in $HOME/.zshrc.*; do
     source $file
 done
