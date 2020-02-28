@@ -104,6 +104,7 @@ if (( $+commands[kubectl] )); then
     eval "$(kubectl completion zsh)"
     alias k="kubectl"
     alias ksn="k config set-context --current --namespace $1"
+
     complete -o default -F __start_kubectl k
 fi
 
@@ -113,6 +114,10 @@ fi
 
 if (( $+commands[kind] )); then
     eval "$(kind completion zsh)"
+fi
+
+if (( $+commands[velero] )); then
+    eval "$(velero completion zsh)"
 fi
 
 for file in $HOME/.zshrc.*; do
