@@ -49,7 +49,7 @@ alias hotspot="git log --format=format: --name-only | grep -v '^$' | sort | uniq
 
 cn() { code -n ${1:-.} }
 cne() { code -n ${1:-.} && exit }
-dim() { printf "\e[8;$2;$1t" }
+dim() { printf "\e[8;${2:-24};${1:-80}t" }
 xg() { xargs mvim }
 xgs() { xargs mvim -o }
 gdiff() { git diff $@ | mvim - }
