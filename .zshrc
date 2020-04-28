@@ -102,6 +102,7 @@ fi
 if (( $+commands[kubectl] )); then
     eval "$(kubectl completion zsh)"
     alias k="kubectl"
+    alias kc="kubectl config current-context"
     alias ksn="k config set-context --current --namespace $1"
 
     complete -o default -F __start_kubectl k
