@@ -47,6 +47,7 @@ alias rt="find spec -name '*_spec.rb' -print0 | xargs -0 stat -f '%m %N' | sort 
 alias password="openssl rand -base64 6"
 alias hotspot="git log --format=format: --name-only | grep -v '^$' | sort | uniq -c | sort -r"
 
+ap() { awk "{print \$$1}" }
 cn() { code -n ${1:-.} }
 cne() { code -n ${1:-.} && exit }
 dim() { printf "\e[8;${2:-24};${1:-80}t" }
