@@ -15,6 +15,7 @@ setopt SHARE_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
 
 #alias
+alias b="bazel build ..."
 alias c="cd"
 alias d="git diff"
 alias g="mvim"
