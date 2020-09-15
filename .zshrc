@@ -16,6 +16,7 @@ setopt HIST_IGNORE_ALL_DUPS
 
 #alias
 alias b="bazel build ..."
+alias t="bazel test ..."
 alias c="cd"
 alias d="git diff"
 alias g="mvim"
