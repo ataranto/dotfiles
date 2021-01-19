@@ -3,6 +3,7 @@ setopt complete_aliases
 bindkey -e
 
 export EDITOR="vim"
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
 PROMPT="%n@%m%% "
 RPROMPT="[%~]"
 
@@ -60,6 +61,24 @@ gdiff() { git diff $@ | mvim - }
 glog() { git log $@ | mvim - }
 gfgrep() { git ls-files | grep --color=auto $@ }
 
+export ZSH_EVAL_CACHE="$HOME/.cache/zsh"
+mkdir -p "$ZSH_EVAL_CACHE"
+
+function _eval() {
+    local file="$ZSH_EVAL_CACHE/$1.zsh"
+
+    if [ ! -s "$file" ]; then
+        if (( $+commands[$1] )); then
+            "$@" > "$file"
+        else
+            return
+        fi
+        
+    fi
+
+    source "$file"
+}
+
 autoload -Uz compinit && compinit
 zstyle ':completion:*' completer _expand _complete _approximate
 
@@ -85,26 +104,17 @@ case $TERM in
         ;;
 esac
 
-export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
-if (( $+commands[hub] )); then
-    eval "$(hub alias -s)"
-fi
-
-if (( $+commands[pyenv] )); then
-    eval "$(pyenv init -)"
-fi
-
-if (( $+commands[rbenv] )); then
-    eval "$(rbenv init -)"
-fi
-
-if (( $+commands[nodenv] )); then
-    eval "$(nodenv init -)"
-fi
+_eval hub alias -s
+_eval pyenv init -
+_eval rbenv init -
+_eval nodenv init -
+_eval kops completion zsh
+_eval kind completion zsh
+_eval velero completion zsh
+_eval kubectl completion zsh
 
 if (( $+commands[kubectl] )); then
-    eval "$(kubectl completion zsh)"
     alias k="kubectl"
     alias kc="kubectl config current-context"
     alias kgn="k get nodes"
@@ -113,18 +123,7 @@ if (( $+commands[kubectl] )); then
     complete -o default -F __start_kubectl k
 fi
 
-if (( $+commands[kops] )); then
-    eval "$(kops completion zsh)"
-fi
-
-if (( $+commands[kind] )); then
-    eval "$(kind completion zsh)"
-fi
-
-if (( $+commands[velero] )); then
-    eval "$(velero completion zsh)"
-fi
-
 for file in $HOME/.zshrc.*; do
     source $file
 done
+
