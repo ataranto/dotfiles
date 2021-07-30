@@ -37,4 +37,5 @@
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
+  "terminal.integrated.showExitAlert": false,
 }
