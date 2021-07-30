@@ -16,8 +16,6 @@ setopt SHARE_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
 
 #alias
-alias b="bazel build ..."
-alias t="bazel test ..."
 alias c="cd"
 alias d="git diff"
 alias g="mvim"
@@ -51,6 +49,8 @@ alias rt="find spec -name '*_spec.rb' -print0 | xargs -0 stat -f '%m %N' | sort 
 alias password="openssl rand -base64 6"
 alias hotspot="git log --format=format: --name-only | grep -v '^$' | sort | uniq -c | sort -r"
 
+b() { bazel build ${1:-...} }
+t() { bazel test ${1:-...} }
 ap() { awk "{print \$$1}" }
 cn() { code -n ${1:-.} }
 cne() { code -n ${1:-.} && exit }
