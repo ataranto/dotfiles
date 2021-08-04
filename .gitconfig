@@ -6,6 +6,7 @@
     pr = pull-request
     lp = log --pretty=oneline --abbrev-commit
     co = checkout
+    pt = fetch --prune origin '+refs/tags/*:refs/tags/*'
     cob = checkout -b
     grpe = grep
     brnach = branch
