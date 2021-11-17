@@ -54,6 +54,7 @@ t() { bazel test ${1:-...} }
 ap() { awk "{print \$$1}" }
 cn() { code -n ${1:-.} }
 cne() { code -n ${1:-.} && exit }
+cdg () { cd $(git rev-parse --show-toplevel) }
 dim() { printf "\e[8;${2:-24};${1:-80}t" }
 xg() { xargs mvim }
 xgs() { xargs mvim -o }
