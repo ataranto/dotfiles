@@ -126,6 +126,7 @@ if (( $+commands[kubectl] )); then
 fi
 
 for file in $HOME/.zshrc.*; do
+    if [[ "$file" == *.bak ]]; then continue; fi
     source $file
 done
 
