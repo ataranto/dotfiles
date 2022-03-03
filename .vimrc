@@ -37,8 +37,6 @@ map <C-J> zzjzz
 map <C-K> zzkzz
 nnoremap <C-S> :execute 'below new' RSpecPath(@%)<CR>
 
-map gx yiW:!open <cWORD><CR> <C-r>" & <CR><CR>
-
 function! RSpecPath(path)
     let l:spec_path = a:path
     let l:spec_path = substitute(l:spec_path, 'app', 'spec', '')
