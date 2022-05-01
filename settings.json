@@ -17,10 +17,6 @@
     "**/bazel-out": true
   },
   "editor.formatOnSave": true,
-  "FSharp.fsiFilePath": "/usr/local/bin/dotnet",
-  "FSharp.fsiExtraParameters": [
-    "fsi"
-  ],
   "search.followSymlinks": false,
   "go.toolsManagement.autoUpdate": true,
   "[json]": {
