@@ -21,13 +21,11 @@
   "FSharp.fsiExtraParameters": [
     "fsi"
   ],
-  "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
   "cSpell.userWords": [
     "bazel"
   ],
   "search.followSymlinks": false,
   "go.toolsManagement.autoUpdate": true,
-  "terminal.integrated.scrollback": 10000,
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
@@ -37,5 +35,6 @@
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
+  "terminal.integrated.scrollback": 10000,
   "terminal.integrated.showExitAlert": false,
 }
