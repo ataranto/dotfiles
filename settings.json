@@ -21,9 +21,6 @@
   "FSharp.fsiExtraParameters": [
     "fsi"
   ],
-  "cSpell.userWords": [
-    "bazel"
-  ],
   "search.followSymlinks": false,
   "go.toolsManagement.autoUpdate": true,
   "[json]": {
