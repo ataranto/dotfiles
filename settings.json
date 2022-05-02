@@ -1,4 +1,5 @@
 {
+  "editor.bracketPairColorization.enabled": true,
   "editor.folding": false,
   "editor.fontSize": 14,
   "editor.minimap.enabled": false,
