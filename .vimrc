@@ -52,6 +52,11 @@ if has("gui_running")
     set guioptions-=m
     set guioptions-=T
     set guioptions-=r
-    set guifont=Menlo:h14
     set lines=24 columns=80
+
+    if has("macunix")
+        set guifont=Menlo:h14
+    elseif has("unix")
+        set guifont=Ubuntu\ Mono\ 12
+    endif
 endif
