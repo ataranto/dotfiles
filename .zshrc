@@ -125,7 +125,7 @@ if (( $+commands[kubectl] )); then
     complete -o default -F __start_kubectl k
 fi
 
-for file in $HOME/.zshrc.*; do
+for file in $HOME/.zshrc.*(N.); do
     if [[ "$file" == *.bak ]]; then continue; fi
     source $file
 done
