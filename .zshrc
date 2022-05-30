@@ -15,10 +15,21 @@ setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
 
+case `uname -s` in
+    FreeBSD) ;&
+    Darwin)
+        export LSCOLORS="Fa"
+        alias ls='ls -G'
+        export GUI_EDITOR="mvim" ;;
+    Linux)
+        alias ls='ls --color=tty'
+        export GUI_EDITOR="gvim" ;;
+esac
+
 #alias
 alias c="cd"
 alias d="git diff"
-alias g="mvim"
+alias g="$GUI_EDITOR"
 alias s="git status"
 alias gb="gradle build"
 alias gg="git grep"
@@ -57,10 +68,10 @@ cn() { code -n ${1:-.} }
 cne() { code -n ${1:-.} && exit }
 cdg () { cd $(git rev-parse --show-toplevel) }
 dim() { printf "\e[8;${2:-24};${1:-80}t" }
-xg() { xargs mvim }
-xgs() { xargs mvim -o }
-gdiff() { git diff $@ | mvim - }
-glog() { git log $@ | mvim - }
+xg() { xargs $GUI_EDITOR }
+xgs() { xargs $GUI_EDITOR -o }
+gdiff() { git diff $@ | $GUI_EDITOR - }
+glog() { git log $@ | $GUI_EDITOR - }
 gfgrep() { git ls-files | grep --color=auto $@ }
 
 export ZSH_EVAL_CACHE="$HOME/.cache/zsh"
@@ -84,16 +95,6 @@ function _eval() {
 autoload -Uz compinit && compinit
 zstyle ':completion:*' completer _expand _complete _approximate
 
-#colorize ls
-case `uname -s` in
-    FreeBSD) ;&
-    Darwin)
-        export LSCOLORS="Fa"
-        alias ls='ls -G' ;;
-    Linux)
-        alias ls='ls --color=tty' ;;
-esac
-
 #x terminal title
 case $TERM in
     *xterm*|rxvt|ansi|(dt|k|E)term)
@@ -105,7 +106,6 @@ case $TERM in
         }
         ;;
 esac
-
 
 _eval hub alias -s
 _eval pyenv init -
