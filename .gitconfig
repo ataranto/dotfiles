@@ -13,3 +13,4 @@
     checkotu = checkout
     recent = for-each-ref --sort=-committerdate refs/heads/ --format='%(committerdate:iso) %(refname:short)'
     untracked = ls-files --others --exclude-standard
+    authors = shortlog -ns -- .
