@@ -92,7 +92,12 @@ function _eval() {
     source "$file"
 }
 
-autoload -Uz compinit && compinit
+autoload -Uz compinit
+for dump in ~/.zcompdump(N.mh+24); do
+  compinit
+done
+compinit -C
+
 zstyle ':completion:*' completer _expand _complete _approximate
 
 #x terminal title
@@ -131,8 +136,6 @@ if (( $+commands[kubectl] )); then
     alias kc="kubectl config current-context"
     alias kgn="k get nodes"
     alias ksn="k config set-context --current --namespace $1"
-
-    complete -o default -F __start_kubectl k
 fi
 
 for file in $HOME/.zshrc.*(N.); do
