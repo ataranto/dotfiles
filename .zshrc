@@ -4,6 +4,7 @@ bindkey -e
 
 export EDITOR="vim"
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
+export TF_PLUGIN_CACHE_DIR="$HOME/.terraform.d/plugin-cache"
 PROMPT="%n@%m%% "
 RPROMPT="[%~]"
 
