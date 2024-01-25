@@ -9,7 +9,6 @@
   ],
   "editor.tabSize": 2,
   "workbench.colorTheme": "Visual Studio Dark",
-  "window.zoomLevel": 1,
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
@@ -28,4 +27,11 @@
   },
   "terminal.integrated.scrollback": 10000,
   "terminal.integrated.showExitAlert": false,
+  "debug.confirmOnExit": "always",
+  "editor.inlineSuggest.enabled": true,
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "terminal.integrated.tabs.enabled": false,
+  "editor.cursorSurroundingLines": 5,
 }
