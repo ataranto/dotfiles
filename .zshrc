@@ -71,6 +71,7 @@ cdg () { cd $(git rev-parse --show-toplevel) }
 dim() { printf "\e[8;${2:-24};${1:-80}t" }
 xg() { xargs $GUI_EDITOR }
 xgs() { xargs $GUI_EDITOR -o }
+last() { grep -oE "[^${1:- }]+$" }
 gdiff() { git diff $@ | $GUI_EDITOR - }
 glog() { git log $@ | $GUI_EDITOR - }
 gfgrep() { git ls-files | grep --color=auto $@ }
