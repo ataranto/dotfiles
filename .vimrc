@@ -1,6 +1,8 @@
-call plug#begin('~/.vim/plugged')
-Plug 'mogelbrod/vim-jsonpath'
-call plug#end()
+if isdirectory("$HOME/.vim/plugged")
+    call plug#begin('$HOME/.vim/plugged')
+    Plug 'mogelbrod/vim-jsonpath'
+    call plug#end()
+endif
 
 autocmd FileType c,h,cpp,c++,cxx,gob,cs set cindent
 autocmd FileType sgml,html              set shiftwidth=2 tabstop=2
