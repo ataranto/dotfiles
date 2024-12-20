@@ -46,6 +46,7 @@ alias mkae="make"
 alias rkae="rake"
 alias grpe="grep"
 alias gti="git"
+alias mdkir="mkdir"
 alias tag="ctags -R *$1"
 alias kmux="pgrep mux\] | xargs kill"
 alias chrome="open -a 'Google Chrome'"
@@ -114,7 +115,6 @@ case $TERM in
         ;;
 esac
 
-_eval hub alias -s
 _eval pyenv init -
 _eval rbenv init -
 _eval nodenv init -
@@ -122,6 +122,7 @@ _eval kops completion zsh
 _eval kind completion zsh
 _eval velero completion zsh
 _eval kubectl completion zsh
+_eval tenv completion zsh
 
 if (( $+commands[dotnet] )); then
     _dotnet_zsh_complete()
@@ -144,4 +145,5 @@ for file in $HOME/.zshrc.*(N.); do
     if [[ "$file" == *.bak ]]; then continue; fi
     source $file
 done
+
 
