@@ -18,20 +18,15 @@
   },
   "editor.formatOnSave": true,
   "search.followSymlinks": false,
-  "go.toolsManagement.autoUpdate": true,
+  "terminal.integrated.scrollback": 10000,
+  "window.confirmBeforeClose": "keyboardOnly",
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
-  "terminal.integrated.scrollback": 10000,
-  "terminal.integrated.showExitAlert": false,
-  "debug.confirmOnExit": "always",
-  "editor.inlineSuggest.enabled": true,
   "[python]": {
     "editor.formatOnType": true
   },
-  "terminal.integrated.tabs.enabled": false,
-  "editor.cursorSurroundingLines": 5,
 }
