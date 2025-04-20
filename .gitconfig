@@ -1,5 +1,7 @@
 [includeIf "gitdir:~/src/"]
     path = .gitconfig.personal
+[core]
+    excludesFile = ~/src/dotfiles/.gitignore.global
 [alias]
     b = branch
     s = status
