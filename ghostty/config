@@ -1,0 +1,11 @@
+# Ghostty configuration file
+# See https://ghostty.org/docs/config/reference for all available options
+background-blur = macos-glass-regular
+background-opacity = 0.5
+
+cursor-style = block
+cursor-style-blink = false
+
+font-family = "Menlo"
+
+shell-integration-features = no-cursor
